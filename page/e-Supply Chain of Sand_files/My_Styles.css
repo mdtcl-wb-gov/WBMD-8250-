@@ -1,0 +1,280 @@
+﻿
+
+.fieldset {
+    display: block;
+    border: 1px solid #ddd !important;
+    margin-left: 2px;
+    margin-right: 2px;
+    padding: 10px;
+    border-radius: 4px;
+    background-color: #f5f5f5;
+    padding-left: 3px!important;
+}
+
+.legend {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 0px;
+    color: #07095f;
+    margin-left: 10px;
+}
+
+.Star {
+    color: red;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+
+
+.ListControl {
+    position: relative;
+    display: block;
+    min-height: 1.5rem;
+    padding-left: 1.5rem;
+    margin-left: -1px;
+    /*padding-top: calc(.375rem + 1px);*/
+    padding-bottom: calc(.375rem + 1px);
+}
+
+    /*.ListControl-inline {
+            display: -ms-inline-flexbox;
+            display: inline-flex;
+            margin-right: 1rem;
+            padding-top: 0.4rem;
+        }*/
+
+    .ListControl input[type=checkbox], input[type=radio] {
+        position: absolute;
+        z-index: -1;
+        opacity: 0;
+    }
+
+
+
+        .ListControl input[type=checkbox]:checked + label::before, input[type=radio]:checked + label::before {
+            color: #fff;
+            border-color: #007bff;
+            background-color: #007bff;
+        }
+
+        .ListControl input[type=checkbox]:focus + label::before, input[type=radio]:focus + label::before {
+            box-shadow: 0 0 0 .2rem rgba(0,123,255,.25);
+        }
+
+        .ListControl input[type=checkbox]:not(:checked) + label::before, input[type=radio]:not(:checked) + label::before {
+            border-color: #80bdff;
+        }
+
+        .ListControl input[type=checkbox]:not(:disabled):active + label::before, input[type=radio]:not(:disabled):active + label::before {
+            color: #fff;
+            background-color: #b3d7ff;
+            border-color: #b3d7ff;
+        }
+
+        .ListControl input[type=checkbox]:disabled + label, input[type=radio]:disabled + label {
+            color: #6c757d;
+        }
+
+        .ListControl input[type=checkbox] + label::before, input[type=radio] + label::before {
+            background-color: #e9ecef;
+        }
+
+
+    .ListControl label {
+        position: relative;
+        margin-bottom: 0;
+        vertical-align: top;
+        margin-right: 36px;
+    }
+
+
+        .ListControl label::before {
+            position: absolute;
+            top: .25rem;
+            left: -1.5rem;
+            display: block;
+            width: 1rem;
+            height: 1rem;
+            pointer-events: none;
+            content: "";
+            background-color: #fff;
+            border: #adb5bd solid 1px;
+        }
+
+        .ListControl label::after {
+            position: absolute;
+            top: .25rem;
+            left: -1.5rem;
+            display: block;
+            width: 1rem;
+            height: 1rem;
+            content: "";
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: 50% 50%;
+        }
+
+
+    .ListControl input[type=checkbox] + label::before {
+        border-radius: .25rem;
+    }
+
+    .ListControl input[type=checkbox]:checked + label::after {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e");
+    }
+
+    .ListControl input[type=checkbox]:indeterminate + label::before {
+        border-color: #007bff;
+        background-color: #007bff;
+    }
+
+    .ListControl input[type=checkbox]:indeterminate + label::after {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 4'%3e%3cpath stroke='%23fff' d='M0 2h4'/%3e%3c/svg%3e");
+    }
+
+    .ListControl input[type=checkbox]:disabled:checked + label::before {
+        background-color: rgba(0,123,255,.5);
+    }
+
+    .ListControl input[type=checkbox]:disabled:indeterminate + label::before {
+        background-color: rgba(0,123,255,.5);
+    }
+
+
+    .ListControl input[type=radio] + label::before {
+        border-radius: 50%;
+    }
+
+    .ListControl input[type=radio]:checked + label::before {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='2' fill='%23fff'/%3e%3c/svg%3e");
+    }
+
+    .ListControl input[type=radio]:focus + .label::before {
+        box-shadow: 0 0 0 .2rem rgba(0,123,255,.25);
+    }
+
+    .ListControl input[type=radio]:focus + .label::after {
+        box-shadow: 0 0 0 .2rem rgba(0,123,255,.25);
+    }
+
+.ajaxmodal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1050;
+    display: block;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    outline: 0;
+}
+
+.ajaxmodal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1040;
+    width: 100vw;
+    height: 100vh;
+    background-color: #000;
+    filter: alpha(opacity=50);
+    opacity: 0.9;
+}
+
+.ajax_tab .ajax__tab_header {
+    cursor: pointer;
+    font-weight: bold;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+}
+
+
+
+.ajax_tab .ajax__tab_inner, .ajax_tab .ajax__tab_active .ajax__tab_inner {
+    /*background: url(../img/_blue_right_Tab.gif) no-repeat right top;*/
+    display: block;
+    padding: .3em;
+    background: #eee;
+    border: 1px solid #ddd;
+    text-align: center;
+    color: #08194a;
+    text-decoration: none;
+    border-radius: 5px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.ajax_tab .ajax__tab_active .ajax__tab_inner {
+    border-bottom-color: transparent;
+    background: #fff;
+    color: #6c6868;
+}
+
+
+.ajax_tab .ajax__tab_body {
+    /*padding: .5em 2em 1em;*/
+    padding: 5px;
+    border: 1px solid #ddd;
+    -webkit-border-radius: 5px;
+    -webkit-border-top-left-radius: 0;
+    -moz-border-radius: 5px;
+    -moz-border-radius-topleft: 0;
+    border-radius: 5px;
+    border-top-left-radius: 0;
+}
+
+.ajax_tab .ajax__tab_active .ajax__tab_body {
+    border-top-color: transparent;
+}
+
+.watermark {
+    display: block;
+    width: 100%;
+    height: calc(2.05rem + 2px);
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    color: #6c757d;
+    opacity: 1;
+    font-style: italic;
+}
+
+/*==== Auto Complete ===*/
+  .completionList {
+            border: solid 1px #d4d4d4;
+            margin: 0px;
+            padding: 0px;
+            max-height: 300px;
+            overflow: auto;
+            background-color: #FFFFFF;
+            border-bottom: none;
+            border-top: none;
+            z-index: 99;
+        }
+
+        .completionListItem {
+            color: #191919;
+            padding: 10px;
+            cursor: pointer;
+            background-color: #fff;
+            border-bottom: 1px solid #d4d4d4;
+        }
+
+        .completionitemHighlighted {
+            /*background-color: #ADD6FF;*/
+            background-color: #e9e9e9;
+            padding: 10px;
+            cursor: pointer;
+            border-bottom: 1px solid #d4d4d4;
+        }
+/*==== Auto Complete ===*/
+
+
+/*RadioButton Like buttons*/
